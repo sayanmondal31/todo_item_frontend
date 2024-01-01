@@ -2,12 +2,12 @@ import axios from "axios";
 
 export const createItemAction = async (payload) => {
   console.log(payload, "item create payload");
-  const response = await axios.post(`http://localhost:5050/Items`, payload);
+  const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/Items`, payload);
   return response;
 };
 
 export const getItemsAction = async () => {
-  const response = await axios.get(`http://localhost:5050/Items`);
+  const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/Items`);
   return response;
 };
 
